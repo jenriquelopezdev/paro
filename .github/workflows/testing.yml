@@ -1,6 +1,6 @@
 name: Android Testing CI
 
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 jobs:
   test:
@@ -14,9 +14,9 @@ jobs:
           distribution: 'corretto'
           cache: gradle
 
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-      - name: Build app
-        run: ./gradlew assemble
-      - name: Run tests
-        run: ./gradlew test
+      - name: Run Unit tests
+        run: ./gradlew testDebugUnitTest
+
+      - name: Android Test Report
+        uses: asadmansr/android-test-report-action@v1.2.0
+        if: ${{ always() }}
