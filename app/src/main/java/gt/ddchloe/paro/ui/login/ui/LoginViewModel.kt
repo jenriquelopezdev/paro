@@ -34,6 +34,5 @@ class LoginViewModel : ViewModel() {
         _isLoading.value = true
         delay(4000)
         _isLoading.value = false
-
     }
 }
