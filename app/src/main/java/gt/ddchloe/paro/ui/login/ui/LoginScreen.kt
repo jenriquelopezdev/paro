@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -74,14 +75,14 @@ fun LoginButton(loginEnabled: Boolean, onLoginSelected: () -> Unit) {
             .fillMaxWidth()
             .height(48.dp),
     ) {
-        Text(text = "Login")
+        Text(text = stringResource(R.string.login))
     }
 }
 
 @Composable
 fun ForgotPassword(modifier: Modifier) {
     Text(
-        text = "Forgot Password?",
+        text = stringResource(R.string.forgot_password),
         modifier = modifier.clickable { },
         color = Color.Blue,
         fontWeight = FontWeight.Bold
@@ -94,7 +95,7 @@ fun PasswordField(password: String, onTextFieldChanged: (String) -> Unit) {
         value = password,
         onValueChange = { onTextFieldChanged(it) },
         modifier = Modifier.fillMaxWidth(),
-        placeholder = { Text(text = "Password") },
+        placeholder = { Text(text = stringResource(R.string.password)) },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         singleLine = true,
         maxLines = 1,
@@ -113,7 +114,7 @@ fun EmailField(email: String, onTextFieldChanged: (String) -> Unit) {
         value = email,
         onValueChange = { onTextFieldChanged(it) },
         modifier = Modifier.fillMaxWidth(),
-        placeholder = { Text(text = "Email") },
+        placeholder = { Text(text = stringResource(R.string.email)) },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
         singleLine = true,
         maxLines = 1,
@@ -130,7 +131,7 @@ fun EmailField(email: String, onTextFieldChanged: (String) -> Unit) {
 fun HeaderImage(modifier: Modifier) {
     Image(
         painter = painterResource(id = R.drawable.idea),
-        contentDescription = "Header",
+        contentDescription = stringResource(R.string.header),
         modifier = modifier
     )
 }

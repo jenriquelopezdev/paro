@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paro</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="forgot_password">¿Has olvidado tu contraseña?</string>
+    <string name="password">Contraseña</string>
+    <string name="email">Correo electrónico</string>
+    <string name="header">Encabezamiento</string>
+</resources>
