@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">paro</string>
+    <string name="app_name">Paro</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="header">Header</string>
 </resources>
